@@ -1,0 +1,27 @@
+import tkinter as tk
+root=tk.Tk()
+root.geometry('500x600')
+root.config(bg="red")
+root.title("Registration From")
+label= tk.Label(root,text="Registration From",font=('calibri',20,'bold')).place(x=160,y=10)
+label1= tk.Label(root,text="Name",font=('calibri',18,'bold')).place(x=10,y=70)
+En1 = tk.Entry(root,width=25,font=20).place(x=130,y=70,height=35)
+label2= tk.Label(root,text="Email Id",font=('calibri',18,'bold')).place(x=10,y=130)
+En2 = tk.Entry(root,width=25,font=20).place(x=130,y=130,height=35)
+label3=tk.Label(root,text="Gender",font=('calibri',18,'bold')).place(x=10,y=190)
+gen = tk.StringVar()
+gen.set("Male")
+Mal = tk.Radiobutton(root,text="Male",font=('calibri',11,'bold'),variable=gen,value="Male").place(x=150,y=190)
+fem = tk.Radiobutton(root,text="Female",font=('calibri',11,'bold'),variable=gen,value="Female").place(x=250,y=190)
+c = tk.StringVar()
+Country=["--None--","India","Australia","England","Canada","Sri Lanka","America","Japan","Russia"]
+c.set("---none---")
+label4=tk.Label(root,text="Country",font=('calibri',20,'bold')).place(x=10,y=250)
+menu = tk.OptionMenu(root,c,*Country).place(x=130,y=250)
+label5= tk.Label(root,text="Language",font=('calibri',20,'bold')).place(x=10,y=300)
+hin = tk.Checkbutton(root,text="Hindi",width=7).place(x=180,y=300,height=35)
+eng = tk.Checkbutton(root,text="English",width=7).place(x=300,y=300,height=35)
+button = tk.Button(root,text="Submit",width=7,fg="white",bg="black").place(x=200,y=400,height=35)
+
+root.mainloop()
+
